@@ -18,7 +18,7 @@
                 "Facebook",
                 "Twitter"
               ],
-              "technos": [
+              "testtypes": [
                 "PHP",
                 "Silex",
                 "Javascript",
@@ -69,7 +69,7 @@
                 "Facebook",
                 "Twitter"
               ],
-              "technos": [
+              "testtypes": [
                 "PHP",
                 "Silex",
                 "NGINX",
@@ -92,7 +92,7 @@
                 "Facebook",
                 "Twitter"
               ],
-              "technos": [
+              "testtypes": [
                 "Javascript",
                 "NodeJs",
                 "NGINX",
@@ -110,7 +110,7 @@
               "dependsOn": [
                 "Wordpress MU"
               ],
-              "technos": [
+              "testtypes": [
                 "PHP",
                 "Wordpress"
               ],
@@ -152,7 +152,7 @@
                 "Router API",
                 "Search API"
               ],
-              "technos": [
+              "testtypes": [
                 "PHP",
                 "Symfony",
                 "Javascript"
@@ -169,7 +169,7 @@
               "dependsOn": [
                 "BO JobBoard"
               ],
-              "technos": [
+              "testtypes": [
                 "PHP",
                 "JobBoard"
               ],
@@ -185,7 +185,7 @@
               "dependsOn": [
                 "BO Store"
               ],
-              "technos": [
+              "testtypes": [
                 "PHP",
                 "Zend",
                 "Magento"
@@ -265,7 +265,7 @@
                   "name": "Videos iOS Mobile"
                 }
               ],
-              "technos": [
+              "testtypes": [
                 "Natif",
                 "Objective-C"
               ]
@@ -283,7 +283,7 @@
                   "name": "Videos Android Mobile"
                 }
               ],
-              "technos": [
+              "testtypes": [
                 "Natif",
                 "Android"
               ]
@@ -299,14 +299,10 @@
                 },
                 {
                   "name": "Videos Windows Mobile",
-                  "children": [
-                    {
-                      "name": "New node"
-                    }
-                  ]
+                  "children": []
                 }
               ],
-              "technos": [
+              "testtypes": [
                 "Natif",
                 "Javascript"
               ]
@@ -361,7 +357,7 @@
           "dependsOn": [
             "CMS"
           ],
-          "technos": [
+          "testtypes": [
             "PHP",
             "Silex",
             "Postgresql"
@@ -387,7 +383,7 @@
             "Storage API"
           ],
           "url": "api.my-media-website.com/picture",
-          "technos": [
+          "testtypes": [
             "PHP",
             "Silex",
             "Postgresql"
@@ -405,7 +401,7 @@
           "dependsOn": [
             "CMS"
           ],
-          "technos": [
+          "testtypes": [
             "PHP",
             "Silex",
             "Postgresql"
@@ -421,7 +417,7 @@
           "name": "Search API",
           "url": "api.my-media-website.com/search",
           "satisfaction": 0.2,
-          "technos": [
+          "testtypes": [
             "PHP",
             "Silex",
             "Postgresql"
@@ -440,7 +436,7 @@
             "BO Account",
             "CRM"
           ],
-          "technos": [
+          "testtypes": [
             "PHP",
             "Silex",
             "Postgresql"
@@ -458,7 +454,7 @@
           "dependsOn": [
             "BO SEO"
           ],
-          "technos": [
+          "testtypes": [
             "PHP",
             "Silex",
             "Postgresql"
@@ -499,7 +495,7 @@
             "CMS"
           ],
           "satisfaction": 0.8,
-          "technos": [
+          "testtypes": [
             "PHP",
             "Silex",
             "Postgresql"
@@ -552,7 +548,7 @@
             }
           ],
           "url": "cms.my-media-website.com",
-          "technos": [
+          "testtypes": [
             "Javascript",
             "NodeJS",
             "Sails"
@@ -567,7 +563,7 @@
         {
           "name": "CRM",
           "url": "?",
-          "technos": [
+          "testtypes": [
             "PHP",
             "SugarCRM"
           ],
@@ -582,7 +578,7 @@
         {
           "name": "Wordpress MU",
           "url": "?",
-          "technos": [
+          "testtypes": [
             "PHP",
             "Wordpress"
           ],
@@ -596,7 +592,7 @@
         {
           "name": "BO Videos",
           "url": "?",
-          "technos": [
+          "testtypes": [
             "PHP",
             "Symfony"
           ],
@@ -610,7 +606,7 @@
         {
           "name": "BO Account",
           "url": "?",
-          "technos": [
+          "testtypes": [
             "PHP",
             "Symfony"
           ],
@@ -635,7 +631,7 @@
             }
           ],
           "url": "?",
-          "technos": [
+          "testtypes": [
             "PHP",
             "Symfony"
           ],
@@ -660,7 +656,7 @@
             }
           ],
           "url": "?",
-          "technos": [
+          "testtypes": [
             "PHP",
             "Symfony"
           ],
@@ -674,7 +670,7 @@
         {
           "name": "BO JobBoard",
           "url": "?",
-          "technos": [
+          "testtypes": [
             "PHP",
             "JobBoard"
           ],
@@ -688,7 +684,7 @@
         {
           "name": "BO Store",
           "url": "?",
-          "technos": [
+          "testtypes": [
             "PHP",
             "Zend",
             "Magento"

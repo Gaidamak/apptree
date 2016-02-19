@@ -27,8 +27,8 @@ angular.module('ChartsApp').directive('treeChart', function(bus) {
                 chart.nameFilter(nameFilter);
             });
 
-            bus.on('technosFilterChange', function(technosFilter) {
-                chart.technosFilter(technosFilter);
+            bus.on('testtypesFilterChange', function(testtypesFilter) {
+                chart.testtypesFilter(testtypesFilter);
             });
 
             bus.on('hostsFilterChange', function(hostsFilter) {

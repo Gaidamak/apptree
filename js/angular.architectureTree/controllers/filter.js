@@ -2,13 +2,13 @@ angular.module('ChartsApp').controller('filterCtrl', function ($scope, bus) {
     'use strict';
 
     bus.on('updateData', function(data) {
-        $scope.technos = computeTechnos(data);
+        $scope.testtypes = computeTestTypes(data);
         $scope.hosts = computeHosts(data);
     });
 
     $scope.nameFilter = '';
 
-    var technosFilter = [];
+    var testtypesFilter = [];
     var hostsFilter = [];
 
     $scope.$watch('nameFilter', function(name) {
@@ -17,15 +17,15 @@ angular.module('ChartsApp').controller('filterCtrl', function ($scope, bus) {
 
     $scope.toggleTechnoFilter = function(techno) {
         if ($scope.isTechnoInFilter(techno)) {
-            technosFilter.splice(technosFilter.indexOf(techno), 1);
+            testtypesFilter.splice(testtypesFilter.indexOf(techno), 1);
         } else {
-            technosFilter.push(techno);
+            testtypesFilter.push(techno);
         }
-        bus.emit('technosFilterChange', technosFilter);
+        bus.emit('testtypesFilterChange', testtypesFilter);
     };
 
     $scope.isTechnoInFilter = function(techno) {
-        return technosFilter.indexOf(techno) !== -1;
+        return testtypesFilter.indexOf(techno) !== -1;
     };
 
     $scope.toggleHostFilter = function(host) {
@@ -41,25 +41,25 @@ angular.module('ChartsApp').controller('filterCtrl', function ($scope, bus) {
         return hostsFilter.indexOf(host) !== -1;
     };
 
-    function computeTechnos(rootNode) {
-        var technos = [];
+    function computeTestTypes(rootNode) {
+        var testtypes = [];
 
-        function addNodeTechnos(node) {
-            if (node.technos) {
-                node.technos.forEach(function(techno) {
-                    technos[techno] = true;
+        function addNodeTestTypes(node) {
+            if (node.testtypes) {
+                node.testtypes.forEach(function(techno) {
+                    testtypes[techno] = true;
                 });
             }
             if (node.children) {
                 node.children.forEach(function(childNode) {
-                    addNodeTechnos(childNode);
+                    addNodeTestTypes(childNode);
                 });
             }
         }
 
-        addNodeTechnos(rootNode);
+        addNodeTestTypes(rootNode);
 
-        return Object.keys(technos).sort();
+        return Object.keys(testtypes).sort();
     }
 
     function computeHosts(rootNode) {

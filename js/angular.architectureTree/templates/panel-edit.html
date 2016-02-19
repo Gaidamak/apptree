@@ -22,10 +22,10 @@
                     </li>
                 </ul>
 
-                <h5>Technos <span class="glyphicon glyphicon-plus" ng-click="addTechno()"></span></h5>
+                <h5>Test Types <span class="glyphicon glyphicon-plus" ng-click="addTechno()"></span></h5>
                 <ul>
-                    <li ng-repeat="techno in node.technos track by $index">
-                        <input type="text" ng-model="node.technos[$index]" init-focus />  <span class="remove glyphicon glyphicon-remove" ng-click="deleteTechno($index)"></span>
+                    <li ng-repeat="techno in node.testtypes track by $index">
+                        <input type="text" ng-model="node.testtypes[$index]" init-focus />  <span class="remove glyphicon glyphicon-remove" ng-click="deleteTechno($index)"></span>
                     </li>
                 </ul>
 

@@ -51,7 +51,7 @@ Then, navigate to http://localhost:4000/.
 
 ## Usage
 
-Filters on `name`, `technos` and `hosts` are avalaible on the left hand side of the screen.
+Filters on `name`, `testtypes` and `hosts` are avalaible on the left hand side of the screen.
 
 Details about a node reveal on the right hand side of the screen when hovering a node.
 
@@ -80,7 +80,7 @@ Each element of your system is defined by a JSON node entry. Here is an example:
     ],
     "url": "www.my-media-website.com/*",
     "dependsOn": ["Content API", "Xiti", "Search API", "OAS", "Account API", "    Picture API", "Router API"],    
-    "technos": ["PHP", "Javascript", "Silex", "NGINX", "Varnish"],  
+    "testtypes": ["PHP", "Javascript", "Silex", "NGINX", "Varnish"],  
     "satisfaction": 0.9,
     "host": { "Amazon": ["fo-1", "fo-2"] }
 }
@@ -92,7 +92,7 @@ Each element of your system is defined by a JSON node entry. Here is an example:
 * `children`: list of sub-applications.
 * `url`: where the application is available (if any)
 * `dependsOn`: list of application dependencies. The mapping is done on the node `name` (that means that two nodes cannot have the same name)
-* `technos`: list of technologies used by the application
+* `testtypes`: list of technologies used by the application
 * `satisfaction`: Overall quality of the application; it's a number between `1` and `0`
   * `1` for a good application
   * `0.8` for application which need some refactoring

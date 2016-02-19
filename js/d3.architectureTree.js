@@ -137,7 +137,7 @@ d3.chart.architectureTree = function() {
      * {
      *   index: {
      *     relatedNodes: ["Foo", "Bar", "Baz", "Buzz"],
-     *     technos: ["Foo", "Bar"],
+     *     testtypes: ["Foo", "Bar"],
      *     host: ["OVH", "fo"]
      *   }
      * }
@@ -145,7 +145,7 @@ d3.chart.architectureTree = function() {
     var addIndex = function(node) {
         node.index = {
             relatedNodes: [],
-            technos: [],
+            testtypes: [],
             hosts: []
         };
         var dependsOn = getDetailCascade(node, 'dependsOn');
@@ -155,9 +155,9 @@ d3.chart.architectureTree = function() {
         if (node.dependents) {
             node.index.relatedNodes = node.index.relatedNodes.concat(node.dependents);
         }
-        var technos = getDetailCascade(node, 'technos');
-        if (technos.length > 0) {
-            node.index.technos = technos;
+        var testtypes = getDetailCascade(node, 'testtypes');
+        if (testtypes.length > 0) {
+            node.index.testtypes = testtypes;
         }
         var hosts = getHostsCascade(node);
         if (hosts.length > 0) {
@@ -206,24 +206,24 @@ d3.chart.architectureTree = function() {
 
     var filters = {
       name: '',
-      technos: [],
+      testtypes: [],
       hosts: []
     };
 
     var isFoundByFilter = function(d) {
         var i;
-        if (!filters.name && !filters.technos.length && !filters.hosts.length) {
+        if (!filters.name && !filters.testtypes.length && !filters.hosts.length) {
             // nothing selected
             return true;
         }
         if (filters.name) {
             if (d.name.toLowerCase().indexOf(filters.name) === -1) return false;
         }
-        var technosCount = filters.technos.length;
-        if (technosCount) {
-            if (d.index.technos.length === 0) return false;
-            for (i = 0; i < technosCount; i++) {
-                if (d.index.technos.indexOf(filters.technos[i]) === -1) return false;
+        var testtypesCount = filters.testtypes.length;
+        if (testtypesCount) {
+            if (d.index.testtypes.length === 0) return false;
+            for (i = 0; i < testtypesCount; i++) {
+                if (d.index.testtypes.indexOf(filters.testtypes[i]) === -1) return false;
             }
         }
         var hostCount = filters.hosts.length;
@@ -292,8 +292,8 @@ d3.chart.architectureTree = function() {
         refreshFilters();
     };
 
-    chart.technosFilter = function(technosFilter) {
-        filters.technos = technosFilter;
+    chart.testtypesFilter = function(testtypesFilter) {
+        filters.testtypes = testtypesFilter;
         refreshFilters();
     };
 

@@ -56,7 +56,7 @@ angular.module('ChartsApp').controller('panelCtrl', function ($scope, $timeout, 
          *   details: {
          *     Dependencies: ["Foo", "Bar (Babar)"],
          *     Dependents: ["Baz", "Buzz"];
-         *     Technos: ["Foo", "Bar (Babar)" }
+         *     TestTypes: ["Foo", "Bar (Babar)" }
          *     Host: ["OVH", "fo (Foo)"]
          *   }
          * }
@@ -70,9 +70,9 @@ angular.module('ChartsApp').controller('panelCtrl', function ($scope, $timeout, 
             if (node.dependents) {
                 node.details.Dependents = node.dependents;
             }
-            var technos = getDetailCascade(node, 'technos');
-            if (technos.length > 0) {
-                node.details.Technos = technos.map(getValueAndAncestor);
+            var testtypes = getDetailCascade(node, 'testtypes');
+            if (testtypes.length > 0) {
+                node.details.TestTypes = testtypes.map(getValueAndAncestor);
             }
             if (node.host) {
                 node.details.Host = [];
@@ -234,14 +234,14 @@ angular.module('ChartsApp').controller('panelCtrl', function ($scope, $timeout, 
     };
 
     $scope.addTechno = function() {
-        if (typeof ($scope.node.technos) === 'undefined') {
-            $scope.node.technos = [];
+        if (typeof ($scope.node.testtypes) === 'undefined') {
+            $scope.node.testtypes = [];
         }
-        $scope.node.technos.push('');
+        $scope.node.testtypes.push('');
     };
 
     $scope.deleteTechno = function(index) {
-        $scope.node.technos.splice(index, 1);
+        $scope.node.testtypes.splice(index, 1);
     };
 
     $scope.addHost = function(key) {

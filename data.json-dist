@@ -11,7 +11,7 @@
               "name": "Home",
               "url": "www.my-media-website.com",
               "dependsOn": ["Content API", "Search API", "Account API", "Picture API", "Facebook", "Twitter"],
-              "technos": ["PHP", "Silex", "Javascript", "NGINX", "Varnish"],
+              "testtypes": ["PHP", "Silex", "Javascript", "NGINX", "Varnish"],
               "host": { "Amazon": ["fo-1", "fo-2"] }
             },
             {
@@ -27,21 +27,21 @@
               ],
               "url": "www.my-media-website.com/*",
               "dependsOn": ["Content API", "Xiti", "Search API", "Google Ads", "Account API", "Picture API", "Router API", "Facebook", "Twitter"],
-              "technos": ["PHP", "Silex", "NGINX", "Varnish"],
+              "testtypes": ["PHP", "Silex", "NGINX", "Varnish"],
               "host": { "Amazon": ["fo-1", "fo-2"] }
             },
             {
               "name": "Live",
               "url": "live.my-media-website.com",
               "dependsOn": ["Content API", "Picture API", "Router API", "Facebook", "Twitter"],
-              "technos": ["Javascript", "NodeJs", "NGINX", "Varnish"],
+              "testtypes": ["Javascript", "NodeJs", "NGINX", "Varnish"],
               "host": { "Amazon": ["fo-live"] }
             },
             {
               "name": "Blogs",
               "url": "blogs.my-media-website.com/*",
               "dependsOn": ["Wordpress MU"],
-              "technos": ["PHP", "Wordpress"],
+              "testtypes": ["PHP", "Wordpress"],
               "host": { "Amazon": ["?"] }
             },
             {
@@ -57,21 +57,21 @@
               ],
               "url": "videos.my-media-website.com",
               "dependsOn": ["Video Player", "Videos API", "Router API", "Search API"],
-              "technos": ["PHP", "Symfony", "Javascript"],
+              "testtypes": ["PHP", "Symfony", "Javascript"],
               "host": { "Amazon": ["fo-video"] }
             },
             {
               "name": "Jobs",
               "url": "jobs.my-media-website.com",
               "dependsOn": ["BO JobBoard"],
-              "technos": ["PHP", "JobBoard"],
+              "testtypes": ["PHP", "JobBoard"],
               "host": { "Amazon": ["?"] }
             },
             {
               "name": "Store",
               "url": "store.my-media-website.com",
               "dependsOn": ["BO Store"],
-              "technos": ["PHP", "Zend", "Magento"],
+              "testtypes": ["PHP", "Zend", "Magento"],
               "host": { "Amazon": ["?"] }
             },
             {
@@ -108,7 +108,7 @@
                 { "name": "Live iOS Mobile" },
                 { "name": "Videos iOS Mobile" }
               ],
-              "technos": ["Natif", "Objective-C"]
+              "testtypes": ["Natif", "Objective-C"]
             },
             {
               "name": "Android app",
@@ -117,7 +117,7 @@
                 { "name": "Live Android Mobile" },
                 { "name": "Videos Android Mobile" }
               ],
-              "technos": ["Natif", "Android"]
+              "testtypes": ["Natif", "Android"]
             },
             {
               "name": "Windows app",
@@ -126,7 +126,7 @@
                 { "name": "Live Windows Mobile" },
                 { "name": "Videos Windows Mobile" }
               ],
-              "technos": ["Natif", "Javascript"]
+              "testtypes": ["Natif", "Javascript"]
             }
           ],
           "dependsOn": ["Content API"]
@@ -158,7 +158,7 @@
           "name": "Content API",
           "url": "api.my-media-website.com/content",
           "dependsOn": ["CMS"],
-          "technos": ["PHP", "Silex", "Postgresql"],
+          "testtypes": ["PHP", "Silex", "Postgresql"],
           "host": { "Amazon": ["api-1", "api-2"] }
         },
         { 
@@ -169,35 +169,35 @@
           ],
           "dependsOn": ["Storage API"],
           "url": "api.my-media-website.com/picture",
-          "technos": ["PHP", "Silex", "Postgresql"],
+          "testtypes": ["PHP", "Silex", "Postgresql"],
           "host": { "Amazon": ["api-1", "api-2"] }
         },
         { 
           "name": "Router API",
           "url": "api.my-media-website.com/router",
           "dependsOn": ["CMS"],
-          "technos": ["PHP", "Silex", "Postgresql"],
+          "testtypes": ["PHP", "Silex", "Postgresql"],
           "host": { "Amazon": ["api-1", "api-2"] }
         },
         { 
           "name": "Search API",
           "url": "api.my-media-website.com/search",
           "satisfaction": 0.2,
-          "technos": ["PHP", "Silex", "Postgresql"],
+          "testtypes": ["PHP", "Silex", "Postgresql"],
           "host": { "Amazon": ["api-1", "api-2"] }
         },
         { 
           "name": "Account API",
           "url": "api.my-media-website.com/account",
           "dependsOn": ["BO Account", "CRM"],
-          "technos": ["PHP", "Silex", "Postgresql"],
+          "testtypes": ["PHP", "Silex", "Postgresql"],
           "host": { "Amazon": ["api-1", "api-2"] }
         },
         {
           "name": "SEO API",
           "url": "api.my-media-website.com/seo",
           "dependsOn": ["BO SEO"],
-          "technos": ["PHP", "Silex", "Postgresql"],
+          "testtypes": ["PHP", "Silex", "Postgresql"],
           "host": { "Amazon": ["api-1", "api-2"] }
         },
         { 
@@ -217,7 +217,7 @@
           "url": "api.my-media-website.com/export",
           "dependsOn": ["CMS"],
           "satisfaction": 0.8,
-          "technos": ["PHP", "Silex", "Postgresql"],
+          "testtypes": ["PHP", "Silex", "Postgresql"],
           "host": { "Amazon": ["api-1", "api-2"] }
         }
       ],
@@ -240,32 +240,32 @@
             { "name": "BO Section manager" }
           ],
           "url": "cms.my-media-website.com",
-          "technos": ["Javascript", "NodeJS", "Sails"],
+          "testtypes": ["Javascript", "NodeJS", "Sails"],
           "host": { "OVH": ["bo-1", "bo-2"] }
         },
         {
           "name": "CRM",
           "url": "?",
-          "technos": ["PHP", "SugarCRM"],
+          "testtypes": ["PHP", "SugarCRM"],
           "satisfaction": 0.5,
           "host": { "OVH": ["crm-1", "crm-2"] }
         },
         {
           "name": "Wordpress MU",
           "url": "?",
-          "technos": ["PHP", "Wordpress"],
+          "testtypes": ["PHP", "Wordpress"],
           "host": { "OVH": ["bo-1", "bo-2"] }
         },
         {
           "name": "BO Videos",
           "url": "?",
-          "technos": ["PHP", "Symfony"],
+          "testtypes": ["PHP", "Symfony"],
           "host": { "OVH": ["bo-1", "bo-2"] }
         },
         {
           "name": "BO Account",
           "url": "?",
-          "technos": ["PHP", "Symfony"],
+          "testtypes": ["PHP", "Symfony"],
           "host": { "OVH": ["bo-1", "bo-2"] }
         },
         {
@@ -276,7 +276,7 @@
             { "name": "BO Meta links" }
           ],
           "url": "?",
-          "technos": ["PHP", "Symfony"],
+          "testtypes": ["PHP", "Symfony"],
           "host": { "OVH": ["bo-1", "bo-2"] }
         },
         {
@@ -287,19 +287,19 @@
             { "name": "Custom Import" }
           ],
           "url": "?",
-          "technos": ["PHP", "Symfony"],
+          "testtypes": ["PHP", "Symfony"],
           "host": { "OVH": ["bo-1", "bo-2"] }
         },
         {
           "name": "BO JobBoard",
           "url": "?",
-          "technos": ["PHP", "JobBoard"],
+          "testtypes": ["PHP", "JobBoard"],
           "host": { "OVH": ["job-1", "job-2"] }
         },
         {
           "name": "BO Store",
           "url": "?",
-          "technos": ["PHP", "Zend", "Magento"],
+          "testtypes": ["PHP", "Zend", "Magento"],
           "host": { "OVH": ["store"] }
         }
       ],
