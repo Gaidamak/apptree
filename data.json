@@ -298,7 +298,12 @@
                   "name": "Live Windows Mobile"
                 },
                 {
-                  "name": "Videos Windows Mobile"
+                  "name": "Videos Windows Mobile",
+                  "children": [
+                    {
+                      "name": "New node"
+                    }
+                  ]
                 }
               ],
               "technos": [
